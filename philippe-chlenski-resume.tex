@@ -1,0 +1,172 @@
+\documentclass[11pt]{article}
+
+\usepackage[letterpaper,
+left=1.75in,
+right=.75in,
+top=0.5in,
+bottom=0.5in]{geometry}
+
+% Fonts:
+\usepackage{ebgaramond}
+\usepackage[scaled]{helvet}
+
+\usepackage{enumitem}
+%\usepackage{mathtools} % Better implementation of braces
+\usepackage{abraces}
+\usepackage{hyperref}  % For PDF link
+
+\usepackage[activate={true,nocompatibility},
+final,
+protrusion=true,
+expansion=true,
+tracking=true,
+kerning=true,
+spacing=true,
+factor=1100,
+stretch=10,
+shrink=10]{microtype}
+\usepackage{titlesec}
+
+\pagestyle{empty}
+\setlength{\parindent}{0em}
+
+\newcommand{\position}[2]{#1 \hfill #2}
+\newcommand{\emphasized}[2]{\emphasis{#1} \medemph{#2}}
+\newcommand{\heading}[1]{\section*{#1}}
+\newcommand{\emphasis}[1]{\textbf{\textsf{#1}}}
+\newcommand{\medemph}[1]{\textsf{#1}}
+\newcommand{\link}[2]{\medemph{\hfill \small \href{#1}{#2}}}
+
+% Make the sections go on the left
+%\geometry{left=6cm,right=3cm} % 3cm for the sections
+\titleformat{\section}[leftmargin]
+{\sffamily\bfseries\filright}
+{\thesection}
+{1em}
+{}
+\titlespacing*{\section}
+{3cm}
+{2ex plus .2ex minus .2ex}
+{1sp}% should be 0, but it must be positive
+
+% Experience environment
+\newenvironment{experience}{
+	\begin{itemize}[leftmargin=*, topsep=0pt] % Aligns bullets to left margin, no spacing
+		\setlength{\itemsep}{0pt} % Vertical space added after each item in the list.
+		\setlength{\parskip}{0pt} % Horizontal space added at the beginning of each paragraph
+		\setlength{\parsep}{10pt} % Vertical space added after each paragraph in the list.
+	}{
+	\end{itemize}
+}
+
+%\renewcommand{\labelitemi}{$\cdot$}
+%\renewcommand{\labelitemii}{$\cdot$}
+%\renewcommand{\familydefault}{\sfdefault}
+
+\reversemarginpar
+
+\begin{document}
+	
+\hspace{-3cm}\Large \textsf{\textbf{Philippe Chlenski}} \normalsize \hfill \medemph{312-545-3322}  $\vert$ 
+$ \aoverbrace[L5UR]{
+	\medemph{p@}\hspace{-.15em}\aunderbrace[l4Dr]{
+		\medemph{chlenski.com}
+	}_{\link{http://www.chlenski.com}{website}}
+}^{\link{mailto:p@chlenski.com}{email}} $
+
+\vfill
+
+\heading{Education:}
+
+\emphasized{Yale University,}{New Haven, CT} \hfill 2018
+\begin{experience}
+	\item BA with distinction in Mathematics \& Philosophy, \textit{cum laude}
+	\item GPA: 3.85\\
+\end{experience}
+
+\emphasized{Deep Springs College,}{Deep Springs, CA} \hfill 2014
+\begin{experience}
+	\item AA in Liberal Arts
+	\item GPA: 3.76
+\end{experience}
+
+\heading{Experience:}
+
+\emphasized{Student Technology Collaborative,}{New Haven, CT}
+\begin{experience}
+	\item \position{Summer Conference Coordinator}{May 2017--Present}
+	\begin{experience}
+		\item Selective summer position for outstanding technicians, Summer 2017 and 2018.
+		\item Manage access credentials and technical support for 4,000 campus visitors and 2,000 summer students. 
+	\end{experience}
+	\item \position{Hardware Specialist}{Oct 2017--May 2018}
+	\begin{experience}
+		\item Provided hardware support to roughly 13,000 students.
+		\item Performed complex hardware repair on modern computer brands including Apple, Lenovo, and Dell.
+		\item Trained, mentored, and evaluated other technicians for promotion to Hardware Specialist. 
+	\end{experience}
+	\item \position{Queue Coordinator}{Jan 2017--May 2018}
+	\begin{experience}
+		\item Managed a team of 4 technicians to provide technical support for over 900 graduate students.
+	\end{experience}
+	\item \position{Student Technician}{Dec 2015--May 2018}
+	\begin{experience}
+		\item Assisted students with technical issues in person or via ServiceNow. 
+		\item Documented work performed and followed up with clients.\\
+	\end{experience}
+\end{experience}
+
+\emphasized{Yale Sustainable Food Program,}{New Haven, CT}
+\begin{experience}
+	\item \position{Senior Adviser}{Sep 2016--May 2017}
+	\begin{experience}
+		\item Migrated organization's website to WordPress. 
+		\item Developed custom theme for website.
+	\end{experience}
+	\item \position{Lazarus Summer Intern}{May 2016--Sep 2016}
+	\begin{experience}
+		\item Planned and led volunteer programming on a one-acre educational farm. 
+		\item Assisted in event planning for the MAD/Yale Leadership Summit. 
+		\item Designed and performed independent computational research using R.\\
+	\end{experience}
+\end{experience}
+
+\emphasized{Yale College Dean's Office,}{New Haven, CT}
+\begin{experience}
+	\item \position{Head Transfer Counselor}{May 2016--May 2017}
+	\begin{experience}
+		\item Managed and created guidelines for a team of 16 transfer counselors.
+		\item Planned orientation events and created resources for posterity.
+		\item Followed up on long-term transfer student integration.\\ 
+	\end{experience}
+\end{experience}
+
+%\emphasized{The New Journal at Yale,}{New Haven, CT}
+%\begin{experience}
+%	\item \position{Web Developer}{Sep 2015--May 2017}
+%	\begin{experience}
+%		\item Implemented a custom, automated WordPress deployment of a website based on proofs from a graphic designer. 
+%		\item Codified best practices for web, including fundraising protocols and web analytics.\\
+%	\end{experience}
+%\end{experience}
+
+\emphasized{Northwestern University,}{Chicago, IL}
+\begin{experience}
+	\item \position{Web Development Intern}{Jun 2015--Aug 2015}
+	\begin{experience}
+		\item Created a searchable online tissue archive using PHP, MySQL, HTML/CSS, and jQuery.
+	\end{experience}
+	\item \position{Data Science Intern}{Jun 2013--Aug 2013}
+	\begin{experience}
+		\item Used R to analyze datasets pertaining to radiation oncology.
+	\end{experience}
+\end{experience}
+
+\heading{Languages:} Russian, English, French.
+%\heading{Technology:} Linux/Unix, FreeBSD, Adobe Creative Suite, Google Analytics, WordPress, Windows, MacOS, ServiceNow, Asterisk, Apple GSX, LaTeX.
+\heading{Programming:} Python (including TensorFlow), R, Racket, PHP, MySQL, HTML/CSS, jQuery, bash.
+\heading{Certifications:} Apple ACST, ACMT, ACiT; Lenovo Service Authorization; Dell Service Authorization.
+
+
+
+\end{document}
